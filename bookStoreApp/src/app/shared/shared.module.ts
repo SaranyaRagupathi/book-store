@@ -5,17 +5,19 @@ import { RouterModule } from '@angular/router';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 import { MaterialModule } from './material.module';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
   
     NotfoundComponent,
-        ToolbarComponent
+        ToolbarComponent,
+        FooterComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     MaterialModule
   ],
-  exports:[ToolbarComponent]
+  exports:[ToolbarComponent,FooterComponent]
 })
 export class SharedModule { }
