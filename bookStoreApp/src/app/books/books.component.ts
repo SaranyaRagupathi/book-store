@@ -7,14 +7,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent implements OnInit {
- bookId:number=10;
- authorId:number=100;
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.firstChild?.params.subscribe(param => {
-      console.log(param);
-    });
   }
 
 }

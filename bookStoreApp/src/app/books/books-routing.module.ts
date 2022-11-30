@@ -5,15 +5,8 @@ import { AllBooksComponent } from './components/all-books/all-books.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 
 const routes: Routes = [
-  {
-    path: 'books',
-    component: BooksComponent,
-    children: [
-      { path: '', redirectTo:'all-books',pathMatch:'full'},
-      { path: 'all-books', component: AllBooksComponent },
-      { path: 'book-details/:id/author/:authorId', component: BookDetailsComponent }
-    ]
-  }
+  { path: '', component: AllBooksComponent },
+  { path: ':id', component: BookDetailsComponent }
 ];
 
 @NgModule({
