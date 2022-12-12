@@ -6,6 +6,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import { PublicRoutingModule } from './books-routing.module';
 import { BooksComponent } from './books.component';
 import { BookService } from './services/book.service';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BookService } from './services/book.service';
   ],
   imports: [
     CommonModule,
-    PublicRoutingModule
+    PublicRoutingModule,
+    SharedModule
   ]
 })
 export class BooksModule { }
