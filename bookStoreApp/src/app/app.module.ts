@@ -20,7 +20,7 @@ import { Counter3Service } from './shared/services/counter3.service';
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [{provide:CounterService,useClass:Counter2Service},Counter3Service],
+  providers: [{provide:Counter2Service,useExisting:CounterService},CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
